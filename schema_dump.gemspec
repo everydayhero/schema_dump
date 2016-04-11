@@ -25,4 +25,5 @@ Gem::Specification.new do |spec|
   spec.add_dependency "activerecord", "~> 4.2"
   spec.add_dependency "mysql2"
   spec.add_dependency "pg"
+  spec.add_dependency "thor"
 end
