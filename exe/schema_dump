@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+
+require "schema_dump"
+require "thor"
+
+module SchemaDump
+  class CLI < Thor
+    desc "dump DATABASE_URL", "Dump a database schema to ActiveRecord::Schema format"
+    option :tables, default: ""
+    def dump(database_url = ENV.fetch("DATABASE_URL"))
+      tables = options[:tables].split(",")
+
+      Dump.call(
+        database_url: database_url,
+        tables: tables,
+      )
+    end
+  end
+end
+
+SchemaDump::CLI.start(ARGV)
