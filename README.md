@@ -18,7 +18,7 @@ $ bin/rake install:local
 
 if `pg` fails to install then try:
 ```
-env ARCHFLAGS="-arch x86_64" gem install pg
+env ARCHFLAGS="-arch x86_64" gem install pg -v '0.21.0'
 ```
 
 ## Command Line Usage
