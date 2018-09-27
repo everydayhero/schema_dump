@@ -7,9 +7,18 @@ Export any database to an ActiveRecord::Schema format.
 This gem isn't released on RubyGems which means you will need to build it
 yourself if you want to use it locally.
 
+```
+$ brew install libpq
+```
+
 ```ruby
 $ bundle install
 $ bin/rake install:local
+```
+
+if `pg` fails to install then try:
+```
+env ARCHFLAGS="-arch x86_64" gem install pg
 ```
 
 ## Command Line Usage
